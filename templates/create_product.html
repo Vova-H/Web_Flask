@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+
+
+{%block title%}
+Create_product
+{%endblock%}
+
+
+{%block body%}
+<div class="container mt-5">
+<h1>Добавление товара</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control"><br>
+        <input type="text" name="dis" id="dis" class="form-control"><br>
+        <input type="text" name="price" id="price" class="form-control"><br>
+        <input type="submit" class="btn btn-success" value="Добавить"> <br>
+    </form>
+</div>
+{%endblock%}
+
