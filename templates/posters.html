@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+
+
+{%block title%}
+Posters
+{%endblock%}
+
+
+
+{%block body%}
+
+
+<div class="container mt-5">
+    <h1>Все объявления</h1>
+
+    {% for element in products %}
+    <div class="alert alert-info">
+    <h2>{{element.title}}</h2>
+    <p>{{element.dis}}</p>
+    <p><b>Цена: {{element.price}}</b></p>
+    <a href="/posters/{{element.id}}" class="btn btn-warning">Детали</a>
+    </div>
+    {%endfor%}
+
+</div>
+
+{% endblock %}
+

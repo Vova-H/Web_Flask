@@ -23,6 +23,19 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/posters')
+def poster():
+    products = Product.query.order_by(Product.id.desc()).all()
+    return render_template("posters.html", products=products)
+
+@app.route('/posters/<int:id>')
+def poster_view(id):
+    product = Product.query.get(id)
+    return render_template("post_view.html", product=product)
+
+
+
+
 @app.route('/about')
 def about():
     return render_template("about.html")
@@ -39,7 +52,7 @@ def create_product():
         try:
             db.session.add(product)
             db.session.commit()
-            return redirect('/')
+            return redirect('/posters')
 
         except:
             return "Произошла ошибка "

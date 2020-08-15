@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+
+
+{%block title%}
+{{product.title}}
+{%endblock%}
+
+
+
+{%block body%}
+
+
+<div class="container mt-5">
+    <h1>{{product.title}}</h1>
+
+
+    <div class="alert alert-info">
+    <p>{{product.dis}}</p>
+    <p><b>Цена: {{product.price}}</b></p>
+    </div>
+
+
+</div>
+
+{% endblock %}
+
