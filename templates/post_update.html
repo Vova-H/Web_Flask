@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+
+
+{%block title%}
+Update_product
+{%endblock%}
+
+
+{%block body%}
+<div class="container mt-5">
+<h1>Редактирование товара</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ product.title}}"><br>
+        <input type="text" name="dis" id="dis" class="form-control"value="{{ product.dis}}"><br>
+        <input type="text" name="price" id="price" class="form-control "value="{{ product.price}}"><br>
+        <input type="submit" class="btn btn-success" value="Обновить"> <br>
+    </form>
+</div>
+{%endblock%}
+

@@ -6,21 +6,26 @@ Posters
 {%endblock%}
 
 
-
 {%block body%}
 
 
 <div class="container mt-5">
     <h1>Все объявления</h1>
 
+
+    {% if products|length>0 %}
     {% for element in products %}
     <div class="alert alert-info">
-    <h2>{{element.title}}</h2>
-    <p>{{element.dis}}</p>
-    <p><b>Цена: {{element.price}}</b></p>
-    <a href="/posters/{{element.id}}" class="btn btn-warning">Детали</a>
+        <h2>{{element.title}}</h2>
+        <p>{{element.dis}}</p>
+        <p><b>Цена: {{element.price}}</b></p>
+        <a href="/posters/{{element.id}}" class="btn btn-warning">Детали</a>
     </div>
     {%endfor%}
+
+    {% else %}
+    <p>На данное время товары отсутствуют</p>
+    {%endif%}
 
 </div>
 
